@@ -1,32 +1,43 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" dir="ltr">
   <head>
+    <meta charset="utf-8">
+    <title>MyQuiz Game</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.min.js"></script>
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.sound.min.js"></script>
     <script src="p5.play.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-database.js"></script>
 
-    <!--Add your Firsebase Config here below. -->
-    // Your web app's Firebase configuration
-  const firebaseConfig = {
-    apiKey: "AIzaSyCXrBfLXwL-vrkNUbhMys2VBlr7gQuCacI",
-    authDomain: "c35-project-23c9e.firebaseapp.com",
-    projectId: "c35-project-23c9e",
-    storageBucket: "c35-project-23c9e.appspot.com",
-    messagingSenderId: "353871716294",
-    appId: "1:353871716294:web:3c64c776080c1953841cc7"
+    <script src="https://www.gstatic.com/firebasejs/6.3.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-database.js"></script>
+
+
+    <script>
+      //Your web app's Firebase configuration
+      var firebaseConfig = {
+    apiKey: "AIzaSyAlYTDtmHd5ebKMonZUo7lnweOzDdBo40E",
+    authDomain: "myquiz-game.firebaseapp.com",
+    databaseURL: "https://myquiz-game-default-rtdb.firebaseio.com",
+    projectId: "myquiz-game",
+    storageBucket: "myquiz-game.appspot.com",
+    messagingSenderId: "135491178213",
+    appId: "1:135491178213:web:7fd97cb4bc6b0b0b4c0e0c"
   };
 
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-   
 
+      // // Initialize Firebase
+      // firebase.initializeApp(firebaseConfig);
+
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    </script>
+
+    <script src="js/Contestant.js"></script>
+    <script src="js/Question.js"></script>
+    <script src="js/Quiz.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css"/>
-    <meta charset="utf-8">
-
   </head>
   <body>
-      <script src="sketch.js"></script>
-    </body>
+    <script src="sketch.js"></script>
+  </body>
 </html>
